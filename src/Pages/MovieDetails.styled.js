@@ -36,3 +36,7 @@ export const LinkBack = styled(Link)`
   align-items: center;
   column-gap: 10px;
 `;
+export const InfoBox = styled.div`
+  padding: 20px;
+  border-bottom: solid 1px grey;
+`;

@@ -1,3 +1,4 @@
+import Cast from 'components/Cast/Cast';
 import { Home } from 'Pages/Home';
 import MovieDetails from 'Pages/MovieDetails';
 import { Movies } from 'Pages/Movies';
@@ -19,7 +20,10 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:movieId" element={<MovieDetails />} />
+
+        <Route path="movies/:movieId" element={<MovieDetails />}>
+          <Route path="cast" element={<Cast />} />
+        </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Container>

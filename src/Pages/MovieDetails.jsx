@@ -1,4 +1,4 @@
-import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import { getMovieDetails } from './../Api/apiService';
 import { useState, useEffect } from 'react';
 import {
@@ -43,6 +43,7 @@ const MovieDetails = () => {
           width={320}
           height={420}
           loading="lazy"
+          alt="poster"
         />
         <MovieInfo>
           <Title>{original_title}</Title>

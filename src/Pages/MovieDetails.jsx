@@ -1,16 +1,17 @@
-import { useParams, useLocation } from 'react-router-dom';
+import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
 import { getMovieDetails } from './../Api/apiService';
 import { useState, useEffect } from 'react';
 import {
   Button,
   GenresList,
+  InfoBox,
   LinkBack,
   MovieBox,
   MovieInfo,
   Title,
 } from './MovieDetails.styled';
 
-import { MdOutlineArrowBack } from 'react-icons/md';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 
 const MovieDetails = () => {
   const [movieDetail, setMovieDetail] = useState({});
@@ -29,7 +30,7 @@ const MovieDetails = () => {
     <main>
       <Button type="button">
         <LinkBack to={location.state?.from ?? '/'}>
-          <MdOutlineArrowBack size={16} />
+          <HiArrowNarrowLeft size={16} />
           Go back
         </LinkBack>
       </Button>
@@ -41,16 +42,16 @@ const MovieDetails = () => {
               : `https://thumbs.dreamstime.com/z/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`
           }
           width={320}
-          height={420}
+          height={380}
           loading="lazy"
           alt="poster"
         />
         <MovieInfo>
           <Title>{original_title}</Title>
-          <h4>User score: {scoreToFixed}%</h4>
-          <h4>Overview</h4>
+          <h3>User score: {scoreToFixed}%</h3>
+          <h3>Overview</h3>
           <p>{overview} </p>
-          <h4>Genres</h4>
+          <h3>Genres</h3>
           <GenresList>
             {genres &&
               genres.length &&
@@ -58,6 +59,23 @@ const MovieDetails = () => {
           </GenresList>
         </MovieInfo>
       </MovieBox>
+      <InfoBox>
+        <h4>Additional information</h4>
+        <ul>
+          <li>
+            <Link to="cast" state={{ ...location.state }}>
+              Cast
+            </Link>
+          </li>
+          <li>
+            {' '}
+            <Link to="reviews" state={{ ...location.state }}>
+              Reviews
+            </Link>
+          </li>
+        </ul>
+      </InfoBox>
+      <Outlet />
     </main>
   );
 };

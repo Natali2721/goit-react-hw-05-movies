@@ -11,6 +11,7 @@ const Form = styled.form`
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
+  margin-top: 8px;
 `;
 
 const Input = styled.input`
@@ -20,7 +21,7 @@ const Input = styled.input`
   font-size: 16px;
   // border: none;
   // outline: none;
-  padding: 0;
+  padding: 4px;
   &::placeholder {
     font: inherit;
     font-size: 16px;

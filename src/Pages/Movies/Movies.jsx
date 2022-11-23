@@ -5,7 +5,7 @@ import { searchMovies } from './../../Api/apiService';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import { SearchBar } from './../../components/SearchBar/SearchBar';
 
-export const Movies = () => {
+const Movies = () => {
   const location = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get('movieName') ?? '';
@@ -59,3 +59,5 @@ export const Movies = () => {
     </main>
   );
 };
+
+export default Movies;

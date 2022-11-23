@@ -4,7 +4,7 @@ import { MovieLink, MovieList, Title } from './Home.styled';
 import { getTrending } from '../../Api/apiService';
 import { Loader } from 'components/Loader/Loader';
 
-export const Home = () => {
+const Home = () => {
   const [trendMovies, setTrendMovies] = useState([]);
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
@@ -33,3 +33,4 @@ export const Home = () => {
     </main>
   );
 };
+export default Home;

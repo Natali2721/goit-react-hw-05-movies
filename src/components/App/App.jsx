@@ -1,10 +1,11 @@
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Cast from 'components/Cast/Cast';
 import Reviews from 'components/Reviews/Reviews';
-import { Home } from 'Pages/Home/Home';
+import Home from 'Pages/Home/Home';
 import MovieDetails from 'Pages/MovieDetails/MovieDetails';
-import { Movies } from 'Pages/Movies/Movies';
-import { NotFound } from 'Pages/NotFound/NotFound';
-import { Routes, Route } from 'react-router-dom';
+import Movies from 'Pages/Movies/Movies';
+
 import { Container, Header, Link } from './App.styled';
 
 export const App = () => {
@@ -26,7 +27,7 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </Container>
   );

@@ -1,5 +1,5 @@
 import { useParams, useLocation, Link, Outlet } from 'react-router-dom';
-import { getMovieDetails } from './../Api/apiService';
+import { getMovieDetails } from '../../Api/apiService';
 import { useState, useEffect } from 'react';
 import {
   Button,

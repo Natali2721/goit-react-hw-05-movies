@@ -1,8 +1,9 @@
 import Cast from 'components/Cast/Cast';
-import { Home } from 'Pages/Home';
-import MovieDetails from 'Pages/MovieDetails';
-import { Movies } from 'Pages/Movies';
-import { NotFound } from 'Pages/NotFound';
+import Reviews from 'components/Reviews/Reviews';
+import { Home } from 'Pages/Home/Home';
+import MovieDetails from 'Pages/MovieDetails/MovieDetails';
+import { Movies } from 'Pages/Movies/Movies';
+import { NotFound } from 'Pages/NotFound/NotFound';
 import { Routes, Route } from 'react-router-dom';
 import { Container, Header, Link } from './App.styled';
 
@@ -23,6 +24,7 @@ export const App = () => {
 
         <Route path="movies/:movieId" element={<MovieDetails />}>
           <Route path="cast" element={<Cast />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>

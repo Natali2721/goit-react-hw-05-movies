@@ -9,7 +9,7 @@ const SearchInput = () => (
     required
     autoComplete="off"
     autoFocus
-    placeholder="Search movie"
+    placeholder="Search movie..."
   />
 );
 

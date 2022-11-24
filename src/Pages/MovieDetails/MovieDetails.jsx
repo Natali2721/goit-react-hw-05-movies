@@ -39,7 +39,7 @@ const MovieDetails = () => {
           src={
             poster_path
               ? `https://image.tmdb.org/t/p/w300${poster_path}`
-              : `https://thumbs.dreamstime.com/z/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`
+              : `http://www.suryalaya.org/images/no_image.jpg`
           }
           width={320}
           height={380}

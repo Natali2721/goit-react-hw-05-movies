@@ -22,11 +22,11 @@ const Home = () => {
       <Title>Top Movies for today</Title>
       <MovieList>
         {trendMovies.map(movie => (
-          <div key={movie.id}>
+          <li key={movie.id}>
             <MovieLink to={`/movies/${movie.id}`} state={{ from: location }}>
               {movie.original_title || movie.name}
             </MovieLink>
-          </div>
+          </li>
         ))}
         {isLoading && <Loader />}
       </MovieList>

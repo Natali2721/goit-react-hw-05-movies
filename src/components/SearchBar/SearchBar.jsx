@@ -4,7 +4,7 @@ import SearchForm from './SearchForm';
 import SearchInput from './SearchInput';
 import PropTypes from 'prop-types';
 
-export const SearchBar = ({ onSubmit, onChange, value }) => (
+export const SearchBar = ({ onSubmit }) => (
   <SearchBox>
     <SearchForm onSubmit={onSubmit}>
       <SearchInput />
